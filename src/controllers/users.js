@@ -269,6 +269,7 @@ exports.updateProfile = async (req, res) => {
         // Find user by email
         const user = await usersModel.findOne({ email });
 
+
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
